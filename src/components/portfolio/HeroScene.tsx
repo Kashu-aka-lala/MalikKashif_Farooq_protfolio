@@ -33,7 +33,7 @@ function Avatar() {
       eyes.current.position.y = -state.pointer.y * 0.04;
     }
     if (group.current) {
-      const targetY = THREE.MathUtils.lerp(0, -0.55, p) + Math.sin(t * 1.2) * 0.05 * (1 - p);
+      const targetY = THREE.MathUtils.lerp(0, -0.3, p) + Math.sin(t * 1.2) * 0.05 * (1 - p);
       group.current.position.y += (targetY - group.current.position.y) * (1 - Math.exp(-5 * dt));
       group.current.rotation.y = Math.sin(t * 0.4) * 0.12 * (1 - p);
     }
@@ -138,8 +138,8 @@ function Desk() {
         <boxGeometry args={[2.8, 0.08, 1.2]} />
         <meshStandardMaterial color="#3a2e63" roughness={0.4} metalness={0.4} />
       </mesh>
-      <mesh position={[0, 0.75, 1.15]} rotation-x={0.12}>
-        <boxGeometry args={[1.3, 0.62, 0.06]} />
+      <mesh position={[0, 0.6, 1.15]} rotation-x={0.12}>
+        <boxGeometry args={[1.2, 0.42, 0.06]} />
         <meshStandardMaterial color="#0d0918" emissive={VIOLET} emissiveIntensity={0.55} />
       </mesh>
       <mesh position={[0, 0.48, 1.7]}>

@@ -43,7 +43,7 @@ function Avatar() {
   });
 
   const body = (
-    <meshStandardMaterial color="#2a2140" roughness={0.35} metalness={0.5} />
+    <meshStandardMaterial color="#6b5a9e" roughness={0.3} metalness={0.45} emissive="#2a1f4d" emissiveIntensity={0.6} />
   );
 
   return (
@@ -136,7 +136,7 @@ function Desk() {
     <group ref={group} position={[0, -2.2, 0]}>
       <mesh position={[0, 0.62, 0.95]} receiveShadow castShadow>
         <boxGeometry args={[2.6, 0.08, 1.2]} />
-        <meshStandardMaterial color="#1b1530" roughness={0.4} metalness={0.4} />
+        <meshStandardMaterial color="#3a2e63" roughness={0.4} metalness={0.4} />
       </mesh>
       <mesh position={[0, 1.15, 0.6]}>
         <boxGeometry args={[1.5, 0.9, 0.06]} />
@@ -175,21 +175,21 @@ export function HeroScene() {
     >
       <color attach="background" args={["#100c1c"]} />
       <fog attach="fog" args={["#100c1c", 9, 22]} />
-      <ambientLight intensity={0.45} />
+      <ambientLight intensity={1.1} />
       <directionalLight
         position={[4, 7, 5]}
-        intensity={1.3}
+        intensity={2.6}
         castShadow
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
       />
-      <pointLight position={[-3.2, 1.8, -2.4]} intensity={26} color={VIOLET} />
-      <pointLight position={[3.4, 2.4, -2.2]} intensity={16} color={CYAN} />
+      <pointLight position={[-3.2, 1.8, -2.4]} intensity={70} color={VIOLET} />
+      <pointLight position={[3.4, 2.4, -2.2]} intensity={45} color={CYAN} />
 
       <Environment>
-        <Lightformer intensity={1.6} position={[0, 5, 2]} scale={[8, 8, 1]} color="#b388ff" />
+        <Lightformer intensity={3} position={[0, 5, 2]} scale={[10, 10, 1]} color="#b388ff" />
         <Lightformer
-          intensity={1}
+          intensity={2}
           color="#22d3ee"
           position={[-5, 1, -1]}
           rotation-y={Math.PI / 2}
@@ -204,7 +204,7 @@ export function HeroScene() {
 
       <mesh rotation-x={-Math.PI / 2} position={[0, -0.32, 0]} receiveShadow>
         <circleGeometry args={[7, 48]} />
-        <meshStandardMaterial color="#15102a" roughness={0.75} metalness={0.2} />
+        <meshStandardMaterial color="#241b42" roughness={0.75} metalness={0.2} />
       </mesh>
 
       <Rig />

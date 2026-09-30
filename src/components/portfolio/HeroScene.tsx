@@ -134,15 +134,15 @@ function Desk() {
 
   return (
     <group ref={group} position={[0, -2.2, 0]}>
-      <mesh position={[0, 0.62, 0.95]} receiveShadow castShadow>
-        <boxGeometry args={[2.6, 0.08, 1.2]} />
+      <mesh position={[0, 0.42, 1.45]} receiveShadow castShadow>
+        <boxGeometry args={[2.8, 0.08, 1.2]} />
         <meshStandardMaterial color="#3a2e63" roughness={0.4} metalness={0.4} />
       </mesh>
-      <mesh position={[0, 1.15, 0.6]}>
-        <boxGeometry args={[1.5, 0.9, 0.06]} />
+      <mesh position={[0, 0.75, 1.15]} rotation-x={0.12}>
+        <boxGeometry args={[1.3, 0.62, 0.06]} />
         <meshStandardMaterial color="#0d0918" emissive={VIOLET} emissiveIntensity={0.55} />
       </mesh>
-      <mesh position={[0, 0.68, 1.25]}>
+      <mesh position={[0, 0.48, 1.7]}>
         <boxGeometry args={[0.9, 0.04, 0.3]} />
         <meshStandardMaterial color="#231a3d" emissive={CYAN} emissiveIntensity={0.25} />
       </mesh>

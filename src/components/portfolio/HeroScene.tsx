@@ -154,13 +154,13 @@ function Rig() {
   useFrame((state, rawDelta) => {
     const dt = Math.min(rawDelta, 0.05);
     const p = scrollProgress.current;
-    const z = THREE.MathUtils.lerp(5.2, 8.4, p);
+    const z = THREE.MathUtils.lerp(6.6, 9.4, p);
     const y = THREE.MathUtils.lerp(1.4, 1.1, p);
     state.camera.position.x +=
       (state.pointer.x * 0.4 - state.camera.position.x) * (1 - Math.exp(-3 * dt));
     state.camera.position.y += (y - state.camera.position.y) * (1 - Math.exp(-3 * dt));
     state.camera.position.z += (z - state.camera.position.z) * (1 - Math.exp(-3 * dt));
-    state.camera.lookAt(-1.0, 0.9, 0);
+    state.camera.lookAt(-0.8, 0.9, 0);
   });
   return null;
 }
@@ -170,7 +170,7 @@ export function HeroScene() {
     <Canvas
       shadows
       dpr={[1, 1.8]}
-      camera={{ position: [0, 1.4, 5.2], fov: 45 }}
+      camera={{ position: [0, 1.4, 6.6], fov: 45 }}
       gl={{ antialias: true }}
     >
       <color attach="background" args={["#100c1c"]} />

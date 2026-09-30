@@ -154,13 +154,13 @@ function Rig() {
   useFrame((state, rawDelta) => {
     const dt = Math.min(rawDelta, 0.05);
     const p = scrollProgress.current;
-    const z = THREE.MathUtils.lerp(6.6, 9.4, p);
-    const y = THREE.MathUtils.lerp(1.4, 1.1, p);
+    const z = THREE.MathUtils.lerp(6.6, 8.2, p);
+    const y = THREE.MathUtils.lerp(1.4, 0.9, p);
     state.camera.position.x +=
       (state.pointer.x * 0.4 - state.camera.position.x) * (1 - Math.exp(-3 * dt));
     state.camera.position.y += (y - state.camera.position.y) * (1 - Math.exp(-3 * dt));
     state.camera.position.z += (z - state.camera.position.z) * (1 - Math.exp(-3 * dt));
-    state.camera.lookAt(-0.8, 0.9, 0);
+    state.camera.lookAt(-0.8, THREE.MathUtils.lerp(0.9, 0.35, p), 0);
   });
   return null;
 }

@@ -82,7 +82,7 @@ function Avatar() {
         {body}
       </mesh>
       <mesh position={[0, 0.9, 0.3]}>
-        <boxGeometry args={[0.3, 0.3, 0.04]} />
+        <boxGeometry args={[0.2, 0.2, 0.04]} />
         <meshStandardMaterial color="#120c22" emissive={NEON} emissiveIntensity={1.4} />
       </mesh>
 
@@ -160,7 +160,7 @@ function Rig() {
       (state.pointer.x * 0.4 - state.camera.position.x) * (1 - Math.exp(-3 * dt));
     state.camera.position.y += (y - state.camera.position.y) * (1 - Math.exp(-3 * dt));
     state.camera.position.z += (z - state.camera.position.z) * (1 - Math.exp(-3 * dt));
-    state.camera.lookAt(0, 0.9, 0);
+    state.camera.lookAt(-1.0, 0.9, 0);
   });
   return null;
 }
